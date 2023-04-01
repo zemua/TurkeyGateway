@@ -1,0 +1,44 @@
+turkey:
+  scheme: http
+  host: localhost
+  authscheme: http
+  authport: 9000
+  authhost: localhost
+  authclient: turkey-client
+  authsecret: 863fa419-703d-41ac-bc5e-0b07a8125231
+  logouturl: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/master/protocol/openid-connect/logout?redirect_uri=${turkey.scheme}://${turkey.host}:${server.port}/some/path
+spring:
+  application:
+    name: gateway-service
+  security:
+    oauth2:
+      client:
+        registration:
+          login:
+            provider: keycloak
+            client-id: ${turkey.authclient}
+            client-secret: ${turkey.authsecret}
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope: openid
+        provider:
+          keycloak:
+            token-uri: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/master/protocol/openid-connect/token
+            authorization-uri: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/master/protocol/openid-connect/auth
+            user-info-uri: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/master/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
+            jwk-set-uri: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/master/protocol/openid-connect/certs
+server:
+  port: 8080
+
+---
+spring:
+  config:
+    activate:
+      on-profile: logdebug
+logging:
+  level:
+    devs.mrp.gullproject: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.test: DEBUG
+    org.springframework.security: DEBUG
