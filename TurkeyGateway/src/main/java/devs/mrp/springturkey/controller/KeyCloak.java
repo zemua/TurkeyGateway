@@ -1,6 +1,7 @@
 package devs.mrp.springturkey.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.gateway.webflux.ProxyExchange;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import reactor.core.publisher.Mono;
 public class KeyCloak {
 
 	@Autowired
+	@Qualifier("token")
 	private EndpointMapper keycloakTokenEndpointMapper;
 
 	@PostMapping("/token")

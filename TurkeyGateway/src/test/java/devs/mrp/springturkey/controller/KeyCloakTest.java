@@ -11,6 +11,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -35,6 +36,7 @@ class KeyCloakTest {
 	private WebTestClient webTestClient;
 	private MockWebServer mockWebServer;
 	@MockBean
+	@Qualifier("token")
 	private EndpointMapper keycloakTokenEndpointMapper;
 
 	@BeforeEach
