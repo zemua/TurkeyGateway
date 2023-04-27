@@ -23,7 +23,7 @@ spring:
           issuer-uri: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/${turkey.realm}
       client:
         registration:
-          keycloak:
+          turkeycloak:
             provider: keycloak
             client-id: ${turkey.authclient}
             client-secret: ${turkey.authsecret}
@@ -31,18 +31,8 @@ spring:
             scope: openid
         provider:
           keycloak:
-            issuer-uri: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/${turkey.realm}
             token-uri: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/${turkey.realm}/protocol/openid-connect/token
             authorization-uri: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/${turkey.realm}/protocol/openid-connect/auth
             user-info-uri: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/${turkey.realm}/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
             jwk-set-uri: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/${turkey.realm}/protocol/openid-connect/certs
-
----
-spring:
-  config:
-    activate:
-      on-profile: debug
-logging:
-  level:
-    root: TRACE
