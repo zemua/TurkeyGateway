@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import devs.mrp.springturkey.mappers.EndpointMapper;
 
-@Component("create")
+@Component("usermgm")
 public class UserManagementBaseEndpointMapper implements EndpointMapper {
 
 	@Value("${turkey.scheme}")
