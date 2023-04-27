@@ -1,6 +1,10 @@
+server:
+  port: 8080
 turkey:
   scheme: http
   host: localhost
+  usermgm:
+    port: 8081
   authscheme: http
   authport: 28080
   authhost: localhost
