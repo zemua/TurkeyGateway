@@ -15,6 +15,9 @@ turkey:
   tokenproperty: access_token
   paths:
     token: /auth/realms/${turkey.realm}/protocol/openid-connect/token
+    createuser: /client/create
+    verifyemail: /client/verify
+    changepass: /client/password
 jwk:
   endpoint: ${turkey.authscheme}://${turkey.authhost}:${turkey.authport}/auth/realms/${turkey.realm}/protocol/openid-connect/certs
 spring:
