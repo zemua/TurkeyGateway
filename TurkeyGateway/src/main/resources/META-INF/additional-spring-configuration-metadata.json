@@ -88,5 +88,10 @@
     "name": "turkey.gateway.port",
     "type": "java.lang.String",
     "description": "A description for 'turkey.gateway.port'"
+  },
+  {
+    "name": "turkey.paths.realm",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.paths.realm'"
   }
 ]}

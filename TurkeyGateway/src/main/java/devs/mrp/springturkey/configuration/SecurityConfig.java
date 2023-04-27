@@ -14,6 +14,9 @@ public class SecurityConfig {
 	@Value("${jwk.endpoint}")
 	private String jwkEndpoint;
 
+	@Value("${spring.security.oauth2.client.provider.keycloak.issuer-uri}")
+	private String issuerUri;
+
 	@Bean
 	public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
 		http

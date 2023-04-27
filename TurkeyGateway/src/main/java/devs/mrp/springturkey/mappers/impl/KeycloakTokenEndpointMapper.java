@@ -22,12 +22,9 @@ public class KeycloakTokenEndpointMapper implements EndpointMapper {
 	@Value("${turkey.realm}")
 	private String realm;
 
-	@Value("${turkey.paths.token}")
-	private String tokenPath;
-
 	@Override
 	public URI getEndpointUri() {
-		return URI.create(scheme + "://" + host + ":" + port + tokenPath);
+		return URI.create(scheme + "://" + host + ":" + port);
 	}
 
 }

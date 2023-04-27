@@ -19,7 +19,7 @@ class KeycloakTokenEndpointMapperTest {
 	@Test
 	void test() {
 		URI result = mapper.getEndpointUri();
-		assertEquals("http://localhost:28080/auth/realms/Turkey/protocol/openid-connect/token", result.toString());
+		assertEquals("http://localhost:28080", result.toString());
 	}
 
 }

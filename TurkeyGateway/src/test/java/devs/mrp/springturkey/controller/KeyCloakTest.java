@@ -56,7 +56,7 @@ class KeyCloakTest {
 				.setBody(mockResponseBody())
 				.setResponseCode(200));
 
-		when(keycloakTokenEndpointMapper.getEndpointUri()).thenReturn(new URI("http://localhost:" + mockWebServer.getPort() + "/auth/realms/Turkey/protocol/openid-connect/token"));
+		when(keycloakTokenEndpointMapper.getEndpointUri()).thenReturn(new URI("http://localhost:" + mockWebServer.getPort()));
 
 		MultiValueMap<String,String> data = new LinkedMultiValueMap<>();
 		data.add("client_id", "clientWithScope");
