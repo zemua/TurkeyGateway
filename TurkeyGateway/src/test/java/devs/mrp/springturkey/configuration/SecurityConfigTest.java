@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import devs.mrp.springturkey.mappers.EndpointMapper;
@@ -25,8 +24,7 @@ import okhttp3.mockwebserver.RecordedRequest;
 
 @EnableAutoConfiguration
 @ContextConfiguration(classes = { SecurityConfig.class, UserManagementBaseEndpointMapper.class, KeycloakTokenEndpointMapper.class })
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@TestPropertySource(properties = {"server.port=28080"})
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class SecurityConfigTest {
 
 	@Autowired
@@ -45,7 +43,7 @@ class SecurityConfigTest {
 	@BeforeAll
 	static void setup() throws IOException {
 		mockWebServer = new MockWebServer();
-		mockWebServer.start();
+		mockWebServer.start(28080); // match oauth server port from test properties
 	}
 
 	@AfterAll
