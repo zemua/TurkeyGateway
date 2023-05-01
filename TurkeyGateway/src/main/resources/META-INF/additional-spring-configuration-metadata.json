@@ -1,0 +1,97 @@
+{"properties": [
+  {
+    "name": "turkey.scheme",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.scheme'"
+  },
+  {
+    "name": "turkey.host",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.host'"
+  },
+  {
+    "name": "turkey.authscheme",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.authscheme'"
+  },
+  {
+    "name": "turkey.authport",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.authport'"
+  },
+  {
+    "name": "turkey.authhost",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.authhost'"
+  },
+  {
+    "name": "turkey.authcontenttype",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.authcontenttype'"
+  },
+  {
+    "name": "turkey.realm",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.realm'"
+  },
+  {
+    "name": "turkey.authclient",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.authclient'"
+  },
+  {
+    "name": "turkey.authsecret",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.authsecret'"
+  },
+  {
+    "name": "turkey.tokenproperty",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.tokenproperty'"
+  },
+  {
+    "name": "turkey.paths.token",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.paths.token'"
+  },
+  {
+    "name": "jwk.endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'jwk.endpoint'"
+  },
+  {
+    "name": "turkey.usermgm.port",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.usermgm.port'"
+  },
+  {
+    "name": "turkey.paths.createuser",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.paths.createuser'"
+  },
+  {
+    "name": "turkey.paths.verifyemail",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.paths.verifyemail'"
+  },
+  {
+    "name": "turkey.paths.changepass",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.paths.changepass'"
+  },
+  {
+    "name": "turkey.port",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.port'"
+  },
+  {
+    "name": "turkey.gateway.port",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.gateway.port'"
+  },
+  {
+    "name": "turkey.paths.realm",
+    "type": "java.lang.String",
+    "description": "A description for 'turkey.paths.realm'"
+  }
+]}
